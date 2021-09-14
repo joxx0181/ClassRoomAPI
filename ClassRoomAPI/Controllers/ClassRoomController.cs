@@ -74,6 +74,7 @@ namespace ClassRoomAPI.Controllers
             // Adding data to database!
             tData.Temp = Temp;
             tData.TempComment = tComment;
+            tData.TempTime = DateTime.Now.ToString("HH:mm");
             data.Temperatures.Add(tData);
             data.SaveChanges();
 

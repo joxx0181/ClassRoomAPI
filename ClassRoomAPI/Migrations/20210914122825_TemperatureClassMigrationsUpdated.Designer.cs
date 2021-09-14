@@ -3,14 +3,16 @@ using ClassRoomAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ClassRoomAPI.Migrations
 {
     [DbContext(typeof(ClassRoomDBContext))]
-    partial class ClassRoomDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210914122825_TemperatureClassMigrationsUpdated")]
+    partial class TemperatureClassMigrationsUpdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

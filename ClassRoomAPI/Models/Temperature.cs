@@ -20,5 +20,7 @@ namespace ClassRoomAPI.Models
         [Required]
         [Column(TypeName = "nvarchar(255)")]
         public string TempComment { get; set; }
+        public string TempTime { get; set; }
+
     }
 }
