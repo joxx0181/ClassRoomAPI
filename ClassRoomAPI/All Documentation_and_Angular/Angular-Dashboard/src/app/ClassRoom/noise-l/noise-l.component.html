@@ -1,0 +1,21 @@
+<br><br>
+
+<label for="dbRange"><span style="font-size: 7px;">Silence &nbsp; Whisper</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Db ({{ dbRange.value}}) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-size: 7px;">Fireworks</span> &nbsp; </label>
+<input type="range" #dbRange (input)="dbRange.value" id="dbRange" min="0" max="140">
+<br>
+
+
+<table class="center">
+    <tr>
+        <td>Id</td>
+        <td>Noise Level</td>
+        <td>Noise Level Comment</td>
+    </tr>  
+    
+    <!--Using ngFor to iterate over collections and async pipe for returning the latest value-->
+    <tr *ngFor="let result of allNoise|async"> 
+        <td>{{result.NoiseId}}</td>  
+        <td>{{result.Noise}}</td>  
+        <td>{{result.NoiseComment}}</td>     
+    </tr>      
+</table>

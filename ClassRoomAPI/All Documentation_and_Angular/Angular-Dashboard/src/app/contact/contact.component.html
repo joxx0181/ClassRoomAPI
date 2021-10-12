@@ -1,0 +1,30 @@
+<div class="hero-image">
+    <div class="hero-text">
+
+    <br><br><br>
+ 
+    <!--Interpolation (property-binding) an string-->   
+    <h3>{{cText}}</h3>
+   
+    <hr/>
+    <div class="container">
+    <!--Using ngSubmit to specify the functions to be run on submit events  -  in this case calling the onSubmit function-->
+    <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col">
+            <input type="text" name="ReplyFrom" class="form-control customizeColor" ngModel placeholder="Enter your mail"> 
+            </div>
+          <div class="col">
+          <input type="text" name="Subject" class="form-control customizeColor" ngModel placeholder="Enter your subject"> 
+          </div>
+          <div class="form-group">
+          <textarea name="Body" rows="5" class="form-control customizeColor" ngModel placeholder="Enter your message"></textarea> 
+          </div>
+          <br>
+          <button type="submit">send mail</button>
+        </div>
+      </div>
+    </form>
+    </div> 
+</div>

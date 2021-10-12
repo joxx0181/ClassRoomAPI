@@ -1,0 +1,27 @@
+<br><br><br>
+
+<div class="col-md-4">
+    <div class="card card-container">
+      <form class="form-signin" #loginForm="ngForm" (ngSubmit)="onLogin()">
+        <div class="container-fluid">
+          <br>
+          <h2 class="form-signin-heading">Login</h2>
+          <div *ngIf="invalidLogin" class="alert-danger">Invalid login</div>
+          <div *ngIf="invalidRegister" class="alert-danger">Invalid register</div>
+          <div *ngIf="ContainsSpecialChars" class="alert-danger">Only letters and numbers. If this is an SQL injection attempt, you just did a criminal crime, which can give you up to 6 years in prison. Dont try again!</div>
+          <br>
+          
+          <input type="text" id="username" name="username" [(ngModel)]="form.username" class="form-control customizeColor" placeholder="Enter Username" required autofocus>
+          <div *ngIf="invalidUser" class="alert-danger">Invalid username</div>
+          <br>
+          
+          <input type="password" id="password" name="password" [(ngModel)]="form.password" class="form-control customizeColor" placeholder="Enter Password" required>
+          <div *ngIf="invalidPass" class="alert-danger">Invalid password</div>
+        <br>
+        <button id="onLogin" type="submit">Login</button>
+        <button id="onRegister" type="button" (click)="onRegister()">Register</button>
+        <br><br>
+      </div>
+    </form>
+  </div>
+  </div>

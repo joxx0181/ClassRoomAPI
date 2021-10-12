@@ -1,0 +1,32 @@
+*{
+    padding:auto;
+    margin:auto;
+    text-align:centre;
+    color: rgb(38, 50, 97);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #dc3545 !important;
+    border-radius: .25rem;
+}
+
+.customizeColor {
+    border: 1px solid #dc3545 !important;
+}
+  
+button {
+    background-color: #263261;
+    color: #fff;
+    border-radius: 12px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+

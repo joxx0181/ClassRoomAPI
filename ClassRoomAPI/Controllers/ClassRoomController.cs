@@ -19,7 +19,7 @@ namespace ClassRoomAPI.Controllers
     public class ClassRoomController : ControllerBase
     {
         private readonly ClassRoomDBContext data;
-
+        
         public ClassRoomController(ClassRoomDBContext context)
         {
             data = context;
